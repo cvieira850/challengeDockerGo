@@ -5,5 +5,5 @@ RUN go build main.go
 
 FROM scratch
 WORKDIR /app
-COPY --from=0 /app/main ./main
+COPY --from=go /app/main ./main
 CMD [ "./main" ]
